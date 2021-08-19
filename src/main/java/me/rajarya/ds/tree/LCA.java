@@ -5,22 +5,6 @@ package me.rajarya.ds.tree;
  */
 public class LCA {
 
-    static class Node {
-        int data;
-        Node left, right;
-
-        public Node(int data) {
-            this.data = data;
-            this.left = this.right = null;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("[Node data=%d]", this.data);
-        }
-    }
-
-
     public static Node LCA(Node root, Node n1, Node n2) {
         if (null == root) return null;
         if (root == n1) {

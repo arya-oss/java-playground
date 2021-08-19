@@ -1,21 +1,6 @@
 package me.rajarya.ds.tree;
 
 public class SymmetricTree {
-    static class Node {
-        int data;
-        Node left, right;
-        public Node(int data) {
-            this.data = data;
-            this.left = null;
-            this.right = null;
-        }
-
-        public Node(int data, Node left, Node right) {
-            this.data = data;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     static boolean isMirror(Node root1, Node root2) {
         if (null == root1 && null == root2) return true;

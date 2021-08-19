@@ -2,15 +2,6 @@ package me.rajarya.ds.tree;
 
 public class LevelOrder {
 
-    static class Node {
-        int data;
-        Node left, right;
-        Node(int data) {
-            this.data = data;
-            this.left = this.right = null;
-        }
-    }
-
     static int height(Node root) {
         if (root == null) return 0;
         return 1 + Math.max(height(root.left), height(root.right));
