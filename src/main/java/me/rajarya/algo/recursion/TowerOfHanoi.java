@@ -3,11 +3,9 @@ package me.rajarya.algo.recursion;
 public class TowerOfHanoi {
 
     public static void solve(int n, char fromPeg, char toPeg, char auxPeg) {
-        if (n == 1) {
-            System.out.println(String.format("Move disk 1 from %c to %c", fromPeg, toPeg));
-        } else {
+        if (n > 0) {
             solve(n-1, fromPeg, auxPeg, toPeg);
-            System.out.println(String.format("Move disk %d from %c to %c", n, auxPeg, fromPeg));
+            System.out.println(String.format("Move disk from %c to %c", fromPeg, toPeg));
             solve(n-1, auxPeg, toPeg, fromPeg);
         }
     }

@@ -1,5 +1,8 @@
 package me.rajarya.ds.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class LevelOrder {
 
     static int height(Node root) {
@@ -21,6 +24,15 @@ public class LevelOrder {
         for (int i = htValue; i >= 0; i--) {
             System.out.println();
             levelOrderUtil(root, i, htValue);
+        }
+        /* Iterative approach */
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node curr = queue.poll();
+            System.out.print(" " + curr);
+            if (curr.left != null) queue.add(curr.left);
+            if (curr.right != null) queue.add(curr.right);
         }
     }
 
