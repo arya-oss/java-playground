@@ -6,12 +6,12 @@ public class ToplogicalSort {
 
     static void topSortUtil(List<List<Integer>> graph, boolean[] visited, int v, Stack<Integer> order) {
         visited[v] = true;
-        order.add(v);
         for (int dest: graph.get(v)) {
             if (!visited[dest]) {
                 topSortUtil(graph, visited, dest, order);
             }
         }
+        order.push(v);
     }
 
     static List<Integer> topSort(List<List<Integer>> graph, int V) {

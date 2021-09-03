@@ -40,4 +40,11 @@ public class PatternSearching {
         }
         return lps;
     }
+
+    public static void main(String[] args) {
+        String text = "java datatypes are int, bool, double, float, long";
+        String pattern = "bool";
+        PatternSearching ps = new PatternSearching();
+        System.out.println(ps.checkPattern(pattern, text));
+    }
 }

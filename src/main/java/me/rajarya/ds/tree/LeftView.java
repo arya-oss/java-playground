@@ -23,6 +23,7 @@ public class LeftView {
         root.left.right = new Node(4);
         root.right.left = new Node(3);
         root.right.right = new Node(7);
+        root.right.right.left = new Node(10);
         leftView(root);
     }
 }
